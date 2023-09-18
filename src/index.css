@@ -5,13 +5,14 @@
 
 html {
   font-family: sans-serif;
+  background-color: #000000;
 }
 
 body {
   margin: 0;
   width: 100%;
   height: auto;
-  background-color: black;
+  position: relative;
 }
 
 .userinput {
@@ -55,7 +56,7 @@ body {
 }
 
 .userlist {
-  max-width: 45%;
+  max-width: 40%;
   margin: 1rem auto;
   padding: 1rem 0.9rem;
   background-color: white;
@@ -71,6 +72,16 @@ body {
   padding: 0.5rem 0.5rem;
   border: 1px solid #808080;
   border-radius: 3px;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
 }
 
 .error {

@@ -7,7 +7,7 @@ const ErrorModal = () => {
   };
 
   return (
-    <div>
+    <div className='overlay'>
       <form className={'error'} onSubmit={submitHandler}>
         <div className={'invalid'}>
           <h3>Invalid Input</h3>
