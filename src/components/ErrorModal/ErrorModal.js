@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../UI/Button/Button';
 
 const ErrorModal = () => {
-  let clicked = false;
+  const [clicked, setClicked] = useState(false);
 
   const submitHandler = (event) => {
     event.preventDefault();
-    clicked = true;
+    setClicked(true);
   };
 
   return (
