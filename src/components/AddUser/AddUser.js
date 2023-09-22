@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import Button from '../UI/Button/Button';
 
+let isAge;
 const AddUser = ({ getUserData }) => {
   const [inputValues, setInputValues] = useState(null);
+  let isEmptyValues = inputValues ? false : true;
+  if (inputValues) isAge = +inputValues.age < 0 ? true : false;
 
   const submitHandler = (event) => {
     event.preventDefault();
-    getUserData(inputValues);
+    getUserData(inputValues, isEmptyValues, isAge);
   };
 
   const inputChangeHandler = ({ target: { value, id } }) => {
