@@ -4,7 +4,6 @@ import UserList from './components/UserList/UserList';
 import ErrorModal from './components/ErrorModal/ErrorModal';
 
 const userDataList = [];
-// let isAge;
 
 const App = () => {
   const [userData, setUserData] = useState(null);
@@ -20,11 +19,7 @@ const App = () => {
   if (userData && userData.username && +userData.age > 0) {
     userDataList.push(userData);
   }
-
-  // if (userData) {
-  //   isAge = userData.age < 0 ? true : false;
-  // }
-
+  
   return (
     <div>
       <AddUser getUserData={getUserData} />

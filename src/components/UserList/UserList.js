@@ -9,7 +9,9 @@ const UserList = ({ userDataList, onAgeError, emptyInputError }) => {
       style={{ display: `${onAgeError || emptyInputError ? 'none' : 'block'}` }}
     >
       {userDataList.map((userData, index) => (
-        <li key={index}>{`${userData.username} (${userData.age} years old)`}</li>
+        <li
+          key={index}
+        >{`${userData.username} (${userData.age} years old)`}</li>
       ))}
     </ul>
   );

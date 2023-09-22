@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../UI/Button/Button';
+import Card from '../UI/Card/Card';
 
 let isAge;
 const AddUser = ({ getUserData }) => {
@@ -16,24 +17,28 @@ const AddUser = ({ getUserData }) => {
     setInputValues((prevValues) => ({ ...prevValues, [id]: value }));
   };
 
+  console.log(inputValues);
+
   return (
-    <form className={'userinput'} onSubmit={submitHandler}>
-      <label htmlFor='username'>Username</label>
-      <input
-        type='text'
-        id='username'
-        className='input'
-        onChange={inputChangeHandler}
-      />
-      <label htmlFor='age'>Age (Years)</label>
-      <input
-        type='number'
-        id='age'
-        className='input'
-        onChange={inputChangeHandler}
-      />
-      <Button className={'add-user'}>Add User</Button>
-    </form>
+    <Card>
+      <form className={'userinput'} onSubmit={submitHandler}>
+        <label htmlFor='username'>Username</label>
+        <input
+          type='text'
+          id='username'
+          className='input'
+          onChange={inputChangeHandler}
+        />
+        <label htmlFor='age'>Age (Years)</label>
+        <input
+          type='number'
+          id='age'
+          className='input'
+          onChange={inputChangeHandler}
+        />
+        <Button className={'add-user'}>Add User</Button>
+      </form>
+    </Card>
   );
 };
 

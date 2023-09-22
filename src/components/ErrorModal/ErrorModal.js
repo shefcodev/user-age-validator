@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../UI/Button/Button';
+import Card from '../UI/Card/Card';
 
 const ErrorModal = ({ isAge }) => {
   const [clicked, setClicked] = useState(false);
@@ -23,17 +24,19 @@ const ErrorModal = ({ isAge }) => {
       id={'overlay'}
       style={{ display: `${(clicked || clickedOverlay) && 'none'}` }}
     >
-      <form className={'error'} onSubmit={submitHandler}>
-        <div className={'invalid'}>
-          <h3>Invalid Input</h3>
-        </div>
-        <p>
-          {isAge
-            ? 'Please enter a postive age.'
-            : 'Please enter a valid and age (non-empty values).'}
-        </p>
-        <Button className={'okay'}>Okay</Button>
-      </form>
+      <Card>
+        <form className={'error'} onSubmit={submitHandler}>
+          <div className={'invalid'}>
+            <h3>Invalid Input</h3>
+          </div>
+          <p>
+            {isAge
+              ? 'Please enter a postive age.'
+              : 'Please enter a valid and age (non-empty values).'}
+          </p>
+          <Button className={'okay'}>Okay</Button>
+        </form>
+      </Card>
     </div>
   );
 };
