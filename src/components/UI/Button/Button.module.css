@@ -1,0 +1,25 @@
+.add-user {
+  font-size: 0.8rem;
+  color: #ffffff;
+  padding: 0.4rem 1rem;
+  background-color: #560056;
+  border: none;
+  border-radius: 5px;
+  box-shadow: none;
+  outline: none;
+}
+
+.okay {
+  font-size: 0.8rem;
+  color: #ffffff;
+  padding: 0.4rem 1rem;
+  background-color: #560056;
+  border: none;
+  border-radius: 5px;
+  box-shadow: none;
+  outline: none;
+  float: right;
+  margin-right: 0.9rem;
+}
+
+

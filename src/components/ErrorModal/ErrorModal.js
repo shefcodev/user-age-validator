@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../UI/Button/Button';
 import Card from '../UI/Card/Card';
+import styles from './ErrorModal.module.css';
 
 const ErrorModal = ({ isAge }) => {
   const [clicked, setClicked] = useState(false);
@@ -19,14 +20,14 @@ const ErrorModal = ({ isAge }) => {
 
   return (
     <div
-      className={'overlay'}
+      className={styles.overlay}
       onClick={clickHandler}
       id={'overlay'}
       style={{ display: `${(clicked || clickedOverlay) && 'none'}` }}
     >
       <Card>
-        <form className={'error'} onSubmit={submitHandler}>
-          <div className={'invalid'}>
+        <form className={styles.error} onSubmit={submitHandler}>
+          <div className={styles.invalid}>
             <h3>Invalid Input</h3>
           </div>
           <p>

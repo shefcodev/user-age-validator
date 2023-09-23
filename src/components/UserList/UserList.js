@@ -1,11 +1,12 @@
 import React from 'react';
+import styles from './UserList.module.css';
 
 const UserList = ({ userDataList, onAgeError, emptyInputError }) => {
   console.log(userDataList);
 
   return (
     <ul
-      className={'userlist'}
+      className={styles.userlist}
       style={{ display: `${onAgeError || emptyInputError ? 'none' : 'block'}` }}
     >
       {userDataList.map((userData, index) => (

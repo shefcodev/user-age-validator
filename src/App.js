@@ -19,7 +19,7 @@ const App = () => {
   if (userData && userData.username && +userData.age > 0) {
     userDataList.push(userData);
   }
-  
+
   return (
     <div>
       <AddUser getUserData={getUserData} />

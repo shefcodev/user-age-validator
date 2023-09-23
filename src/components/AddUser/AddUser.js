@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../UI/Button/Button';
 import Card from '../UI/Card/Card';
+import styles from './AddUser.module.css';
 
 let isAge;
 const AddUser = ({ getUserData }) => {
@@ -21,19 +22,19 @@ const AddUser = ({ getUserData }) => {
 
   return (
     <Card>
-      <form className={'userinput'} onSubmit={submitHandler}>
+      <form className={styles.userinput} onSubmit={submitHandler}>
         <label htmlFor='username'>Username</label>
         <input
           type='text'
           id='username'
-          className='input'
+          className={styles.input}
           onChange={inputChangeHandler}
         />
         <label htmlFor='age'>Age (Years)</label>
         <input
           type='number'
           id='age'
-          className='input'
+          className={styles.input}
           onChange={inputChangeHandler}
         />
         <Button className={'add-user'}>Add User</Button>
